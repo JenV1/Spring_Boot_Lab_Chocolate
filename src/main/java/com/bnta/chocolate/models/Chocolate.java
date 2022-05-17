@@ -1,5 +1,7 @@
 package com.bnta.chocolate.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 
 @Entity
@@ -14,6 +16,7 @@ public class Chocolate {
 
     private int cocoaPercentage;
 
+    @JsonBackReference
     @ManyToOne
     private Estate estate;
 

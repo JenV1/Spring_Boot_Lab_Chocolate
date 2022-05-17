@@ -16,4 +16,7 @@ public class ChocolateService {
     public List<Chocolate> getAll() {
         return chocolateRepository.findAll();
     }
+
+    public void save(Chocolate chocolate) {
+    }
 }
