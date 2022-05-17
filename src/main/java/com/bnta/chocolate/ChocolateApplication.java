@@ -8,6 +8,7 @@ public class ChocolateApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ChocolateApplication.class, args);
+
 	}
 
 }

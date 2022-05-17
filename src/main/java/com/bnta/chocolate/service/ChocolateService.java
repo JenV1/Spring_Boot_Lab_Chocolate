@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ChocolateService {
@@ -17,6 +18,11 @@ public class ChocolateService {
         return chocolateRepository.findAll();
     }
 
-    public void save(Chocolate chocolate) {
+//    public void save(Chocolate chocolate) {
+//        chocolateRepository.save(chocolate);
+//    }
+
+    public Optional<Chocolate> getIndividualChocolate(int id) {
+        return chocolateRepository.findById((long) id);
     }
 }
