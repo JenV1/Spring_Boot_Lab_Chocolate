@@ -17,12 +17,7 @@ public class ChocolateController {
 
     @Autowired
     private EstateRepository estateRepository;
-
-    @GetMapping("/chocolates")
-    public List<Chocolate> getAll() {
-        return chocolateService.getAll();
-    }
-
+    
     @GetMapping("/chocolate/{id}")
     public Optional<Chocolate> getIndividualChocolate(@PathVariable int id) {
         return chocolateService.getIndividualChocolate(id);
@@ -35,8 +30,8 @@ public class ChocolateController {
         chocolateService.save(chocolate);
     }
 
-    @GetMapping("/60")
-    public List<Chocolate> getChocolateOverCocoaPercentage() {
-        return chocolateService.getChocolateOverCocoaPercentage();
+    @RequestMapping(value = "chocolates", method = RequestMethod.GET)
+    public @ResponseBody List<Chocolate> getChocolateOverCocoaPercentage(@RequestParam(value = "cocoaPercentage", defaultValue = "0") int percentage) {
+        return chocolateService.getChocolateOverCocoaPercentage(percentage);
     }
 }

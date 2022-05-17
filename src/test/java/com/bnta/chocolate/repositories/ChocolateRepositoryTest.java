@@ -15,6 +15,6 @@ class ChocolateRepositoryTest {
 
     @Test
     void testQueryMethod() {
-        assertEquals(2, chocolateRepository.cocoaMoreThan60Percent().size());
+        assertEquals(2, chocolateRepository.cocoaMoreThan60Percent(60).size());
     }
 }

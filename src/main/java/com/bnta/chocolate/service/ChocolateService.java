@@ -26,7 +26,7 @@ public class ChocolateService {
         return chocolateRepository.findById((long) id);
     }
 
-    public List<Chocolate> getChocolateOverCocoaPercentage() {
-        return chocolateRepository.cocoaMoreThan60Percent();
+    public List<Chocolate> getChocolateOverCocoaPercentage(int percentage) {
+        return chocolateRepository.cocoaMoreThan60Percent(percentage);
     }
 }
