@@ -21,4 +21,8 @@ public class EstateService {
     public Optional<Estate> getIndividualEstate(int id) {
         return estateRepository.findById((long) id);
     }
+
+    public void save(Estate estate) {
+        estateRepository.save(estate);
+    }
 }

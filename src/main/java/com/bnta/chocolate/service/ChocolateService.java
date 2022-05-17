@@ -18,9 +18,9 @@ public class ChocolateService {
         return chocolateRepository.findAll();
     }
 
-//    public void save(Chocolate chocolate) {
-//        chocolateRepository.save(chocolate);
-//    }
+    public void save(Chocolate chocolate) {
+        chocolateRepository.save(chocolate);
+    }
 
     public Optional<Chocolate> getIndividualChocolate(int id) {
         return chocolateRepository.findById((long) id);
