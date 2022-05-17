@@ -34,4 +34,9 @@ public class ChocolateController {
         Chocolate chocolate = new Chocolate(null, chocolateName, cocoaPercentage, estateRepository.getById(estateID));
         chocolateService.save(chocolate);
     }
+
+    @GetMapping("/60")
+    public List<Chocolate> getChocolateOverCocoaPercentage() {
+        return chocolateService.getChocolateOverCocoaPercentage();
+    }
 }

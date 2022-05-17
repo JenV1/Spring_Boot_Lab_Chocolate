@@ -25,7 +25,7 @@ public class DBSeeder implements ApplicationRunner {
         Estate estate5 = new Estate(null, "France_Estate", "France", null);
 
         Chocolate chocolate1 = new Chocolate(null, "Name1", 20, estate1);
-        Chocolate chocolate2 = new Chocolate(null, "Name2", 30, estate1);
+        Chocolate chocolate2 = new Chocolate(null, "Name2", 60, estate1);
         Chocolate chocolate3 = new Chocolate(null, "Name3", 39, estate2);
         Chocolate chocolate4 = new Chocolate(null, "Name4", 100, estate2);
         Chocolate chocolate5 = new Chocolate(null, "Name5", 50, estate3);
